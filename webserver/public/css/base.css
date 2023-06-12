@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  /*c3 盒子模型*/
+  box-sizing: border-box;
+  white-space: nowrap;
+  user-select: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*声明字体图标*/
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?tomleg');
+  src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?tomleg') format('truetype'), url('../fonts/icomoon.woff?tomleg') format('woff'), url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+/*去掉li圆点*/
+li {
+  list-style: none;
+}
+/*em i 斜体文字不倾斜*/
+em,
+i {
+  font-style: normal;
+}
+img {
+  /*bodeer 0 照顾低版本浏览器 如果 图片外边包含了链接会有边框的问题*/
+  border: 0;
+  /*取消图片底侧有空白缝隙的问题*/
+  vertical-align: middle;
+}
+button {
+  /*当我们鼠标经过 button 按钮的时候 鼠标变小手*/
+  cursor: pointer;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.2rem;
+}
+a:hover {
+  color: #0086f6;
+}
+button,
+input {
+  font-family: Microsoft YaHei, Heiti sc, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  border: 0;
+  outline: none;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}

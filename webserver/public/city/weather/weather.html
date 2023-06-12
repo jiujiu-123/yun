@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>各地气温</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="./weather.css">
+    <script src="../../js/flexible.js"></script>
+    <script src="../../js/echarts.common.js"></script>
+    <script src="../../js/axios.js"></script>
+    <script src="../../js/weather.js"></script>
+</head>
+<style>
+    h1 {
+        width: 1900px;
+        text-align: center;
+        margin: .625rem auto;
+    }
+
+    div {
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div class="w">
+        <div class="top">
+            <a class="logo clearfix" href="../../index.html">
+                <img src="../../images/logo1.jpg" alt="">
+            </a>
+            <div class="time">
+            </div>
+            <div class="search">
+                <input type="text">
+                <label for="">搜索相关旅游景点</label>
+                <button></button>
+            </div>
+            <ul>
+                <li>
+                    <i></i>
+                    <a href="../../login.html?id=1">登录</a>
+                </li>
+                <li>
+                    <a href="../../login.html?id=2">注册</a>
+                </li>
+                <li>
+                    <span>二维码</span>
+                    <div style="border: 0;">
+                        <img src="../../images/erweima.jpg" alt=""
+                            style="width: 196px;height: 200px;z-index: 3;display: inline-block;">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h1>云南各地天气详情图</h1>
+    <div id="main" style="width: 1900px;height:600px;"></div>
+    <div id="main1" style="width: 1900px;height:600px;"></div>
+    <div id="main2" style="width: 1900px;height:600px;"></div>
+    <div id="main3" style="width: 1900px;height:600px;"></div>
+    <div id="main4" style="width: 1900px;height:600px;"></div>
+    <div id="main5" style="width: 1900px;height:600px;"></div>
+    <div id="main6" style="width: 1900px;height:600px;"></div>
+    <div id="main7" style="width: 1900px;height:600px;"></div>
+
+</body>
+
+<script>
+    var chartDom1 = document.getElementById('main1');
+    var chartDom2 = document.getElementById('main2');
+    var chartDom3 = document.getElementById('main3');
+    var chartDom4 = document.getElementById('main4');
+    var chartDom5 = document.getElementById('main5');
+    var chartDom6 = document.getElementById('main6');
+    var chartDom7 = document.getElementById('main7');
+    let citycode = [530100, 530300, 532900, 530700, 530800, 532800, 533401]
+    function echart(chartDom, citycode) {
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            title: {
+                text: ''
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {},
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Mon', 'Tue', 'Wed', 'Thu']
+            },
+            yAxis: {
+                type: 'value',
+                min: -5,
+                max: 40,
+                interval: 5,
+                axisLabel: {
+                    formatter: '{value} °C'
+                }
+            },
+            series: [
+                {
+                    name: '最高气温',
+                    type: 'line',
+                    data: [],
+                    markPoint: {
+                        data: [
+                            { type: 'max', name: 'Max' },
+                            { type: 'min', name: 'Min' }
+                        ]
+                    },
+
+                },
+                {
+                    name: '最低气温',
+                    type: 'line',
+                    data: [],
+                    // markPoint: {
+                    //     data: [{ name: '周最低', value: -2, xAxis: 1, yAxis: -1.5 }]
+                    // },
+
+                }
+            ]
+        };
+
+        let arr1 = []
+        let arr2 = []
+        let arr3 = []
+        function CityWeather(option, citycode) {
+            return axios({
+                method: "get",
+                url: `https://restapi.amap.com/v3/weather/weatherInfo?city=${citycode}&key=e704edef25d70309a092d96a8738728a&extensions=all`
+            })
+        }
+        CityWeather(option, citycode).then((response) => {
+            for (let i = 0; i < response.data.forecasts[0].casts.length; i++) {
+                arr2.push(response.data.forecasts[0].casts[i].daytemp)
+                arr1.push(response.data.forecasts[0].casts[i].nighttemp)
+                arr3.push(response.data.forecasts[0].casts[i].date)
+            }
+            option.title.text = response.data.forecasts[0].city
+            option.series[0].data = arr2
+            option.series[1].data = arr1
+            option.xAxis.data = arr3
+            // console.log(option.series[0].data, option.series[1].data);
+            option && myChart.setOption(option);
+
+        })
+
+        option && myChart.setOption(option);
+    }
+    echart(chartDom1, citycode[0])
+    echart(chartDom2, citycode[1])
+    echart(chartDom3, citycode[2])
+    echart(chartDom4, citycode[3])
+    echart(chartDom5, citycode[4])
+    echart(chartDom6, citycode[5])
+    echart(chartDom7, citycode[6])
+
+</script>
+
+</html>

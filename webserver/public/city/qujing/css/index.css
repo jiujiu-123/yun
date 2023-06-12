@@ -1,0 +1,341 @@
+@media screen and (max-width: 1024px) {
+  html .Tops .top .search label {
+    display: none;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .Tops .top ul li:nth-child(4) {
+    display: none;
+  }
+}
+.Tops {
+  width: 100%;
+  box-shadow: 0 12px 5px -10px rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 12px 5px -10px rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+.Tops .w {
+  width: 18.5rem;
+  height: 100%;
+  margin: 0 auto;
+}
+.Tops .w .top {
+  display: flex;
+  justify-content: space-between;
+  height: 1.25rem;
+}
+.Tops .w .top .logo {
+  width: 2.25rem;
+  height: 1.25rem;
+}
+.Tops .w .top .logo img {
+  width: 100%;
+  height: 100%;
+}
+.Tops .w .top .time {
+  font-size: 0.2rem;
+  margin-top: 0.4625rem;
+  margin-left: 0.3rem;
+  text-shadow: 3px 2px 5px #0086f6;
+  color: blue;
+}
+.Tops .w .top .search {
+  display: flex;
+  width: 5rem;
+  height: 0.4375rem;
+  margin-left: 0.5rem;
+  margin-top: 0.3625rem;
+  border-radius: 15px 15px;
+  position: relative;
+}
+.Tops .w .top .search input {
+  width: 4.375rem;
+  height: 0.4375rem;
+  border-radius: 15px 0 0 15px;
+  letter-spacing: 0.0375rem;
+  padding-left: 0.1875rem;
+  border: 1px solid #0086f6;
+}
+.Tops .w .top .search label {
+  position: absolute;
+  top: 0.0637rem;
+  left: 0.375rem;
+  color: #767373;
+  background-color: #ffffff;
+  user-select: none;
+  font-size: 0.2075rem;
+}
+.Tops .w .top .search button {
+  display: inline-block;
+  width: 0.625rem;
+  height: 0.4375rem;
+  background-color: #0086f6;
+  border-radius: 0 15px 15px 0;
+}
+.Tops .w .top .search button::before {
+  content: "\e986";
+  font-family: "icomoon";
+}
+.Tops .w .top ul {
+  margin-left: 0.625rem;
+  margin-top: 0.3625rem;
+  display: flex;
+  justify-content: space-between;
+  width: 5.5rem;
+  font-size: 0.2rem;
+}
+.Tops .w .top ul li {
+  text-align: center;
+  height: 0.4375rem;
+  line-height: 0.4375rem;
+  margin-right: 0.375rem;
+  cursor: pointer;
+}
+.Tops .w .top ul li:first-child {
+  width: 1.55rem;
+  border-radius: 30px 30px;
+  background-color: #acd5fc;
+}
+.Tops .w .top ul li i::before {
+  display: inline-block;
+  content: "\e916";
+  font-family: "icomoon";
+  color: #0086f6;
+  vertical-align: bottom;
+}
+.Tops .w .top ul li:last-child {
+  position: relative;
+}
+.Tops .w .top ul li:last-child div {
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0.555rem;
+  left: -0.875rem;
+  border: 1px solid #0086f6;
+}
+.Tops .w .top ul li:last-child div::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #ccc;
+  border-left: 2px solid #ccc;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -0.11rem;
+  left: 1.075rem;
+  background-color: white;
+  z-index: 1;
+}
+.Tops .w .top ul li:last-child:hover div {
+  display: block;
+}
+.bodys {
+  margin-top: 0.0375rem;
+  background-color: #f6f6f6;
+}
+.bodys .w {
+  width: 18.5rem;
+  height: 100%;
+  margin: 0 auto;
+}
+.bodys .w .nav {
+  height: 0.5rem;
+  line-height: 0.4375rem;
+  font-size: 0.2rem;
+  padding-top: 0.0625rem;
+  margin-bottom: 0.1625rem;
+}
+.bodys .w .intro {
+  display: flex;
+  background-color: white;
+  height: 5.7rem;
+  padding-top: 0.3rem;
+  font-size: 0.2rem;
+}
+.bodys .w .intro .lunbo {
+  flex: 1.5;
+  height: 5rem;
+  overflow: hidden;
+  margin-left: 0.2125rem;
+  background-color: aqua;
+  position: relative;
+}
+.bodys .w .intro .lunbo ul {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30.8rem;
+  transition: left 0.6s;
+}
+.bodys .w .intro .lunbo ul li {
+  width: 7.54rem;
+}
+.bodys .w .intro .lunbo ul li img {
+  width: 100%;
+  height: 100%;
+}
+.bodys .w .intro .list-tu {
+  flex: 0.3;
+  margin: 0 0.1875rem 0 0.1875rem;
+}
+.bodys .w .intro .list-tu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bodys .w .intro .list-tu ul li {
+  width: 1.6rem;
+  height: 1.2rem;
+  margin-bottom: 0.0666rem;
+}
+.bodys .w .intro .list-tu ul li:last-child {
+  margin-bottom: 0;
+}
+.bodys .w .intro .list-tu ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.bodys .w .intro .list-tu ul .actives {
+  border: 5px solid #0086f6;
+}
+.bodys .w .intro .details {
+  flex: 1.7;
+  width: 5.625rem;
+  height: 20rem;
+  margin-right: 0.0625rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.1625rem;
+}
+.bodys .w .intro .details .names {
+  display: flex;
+  justify-content: space-between;
+  height: 0.6rem;
+}
+.bodys .w .intro .details .names:nth-child(1) {
+  font-size: 0.375rem;
+}
+.bodys .w .intro .details .names .heat {
+  width: 0.7rem;
+  font-size: 0.2rem;
+  text-align: center;
+  background: linear-gradient(90deg, #ff716e, #ff902a);
+  color: #fff;
+  border-radius: 0.1rem;
+  margin-right: 0.13rem;
+}
+.bodys .w .intro .details .names .heat div {
+  height: 50%;
+}
+.bodys .w .intro .details .grade {
+  height: 0.35rem;
+  line-height: 0.35rem;
+}
+.bodys .w .intro .details .grade span {
+  font-size: 0.325rem;
+  color: #2681ff;
+}
+.bodys .w .intro .details .address,
+.bodys .w .intro .details .times,
+.bodys .w .intro .details .phone,
+.bodys .w .intro .details .message {
+  display: flex;
+  height: 0.25rem;
+  margin: 0.1rem 0 0.1rem 0;
+  line-height: 0.25rem;
+}
+.bodys .w .intro .details .address p:first-child,
+.bodys .w .intro .details .times p:first-child,
+.bodys .w .intro .details .phone p:first-child,
+.bodys .w .intro .details .message p:first-child {
+  width: 1rem;
+  font-weight: 700;
+  color: #333;
+}
+.bodys .w .content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.275rem;
+}
+.bodys .w .content .brief {
+  width: 13rem;
+  padding: 0.35rem 0.25rem 0.25rem 0.25rem;
+  margin-bottom: 0.225rem;
+  background-color: white;
+}
+.bodys .w .content .brief .title {
+  font-size: 0.25rem;
+  color: #333;
+  line-height: 0.25rem;
+  font-weight: 700;
+}
+.bodys .w .content .brief .imgcontent {
+  margin: 0.2rem 0 0.4rem 0;
+}
+.bodys .w .content .brief p {
+  white-space: normal;
+  font-size: 0.2rem;
+  color: #333;
+  line-height: 0.4rem;
+  margin-bottom: 0.0625rem;
+}
+.bodys .w .content .brief .item-p {
+  line-height: 0.375rem;
+}
+.bodys .w .content .brief img {
+  display: inline-block;
+  width: 100%;
+}
+.bodys .w .content .brief .content-box {
+  font-size: 0.175rem;
+  white-space: normal;
+  margin: 0.2rem 0 0.4rem 0;
+}
+.bodys .w .content .rim {
+  width: 5rem;
+}
+.bodys .w .content .rim .nearList {
+  background-color: white;
+  padding: 0.25rem 0.25rem 0.1rem;
+}
+.bodys .w .content .rim .nearList .nearboxTop {
+  width: 0.905rem;
+  font-size: 0.225rem;
+  font-weight: 700;
+  margin-bottom: 0.275rem;
+  border-bottom: 2px solid #0086f6;
+}
+.bodys .w .content .rim .nearList .boxs .nearbox {
+  display: flex;
+  margin-bottom: 0.15rem;
+}
+.bodys .w .content .rim .nearList .boxs .nearbox .imgbox {
+  width: 0.925rem;
+  height: 0.75rem;
+  margin-right: 0.1rem;
+}
+.bodys .w .content .rim .nearList .boxs .nearbox .imgbox img {
+  width: 100%;
+  height: 100%;
+}
+.bodys .w .content .rim .nearList .boxs .nearbox .contentbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bodys .w .content .rim .nearList .boxs .nearbox .contentbox div:nth-child(1) {
+  font-size: 0.18rem;
+}
+.bodys .w .content .rim .nearList .boxs .nearbox .contentbox div:nth-child(2) {
+  font-size: 0.15rem;
+  color: #0086f6;
+}
+.bodys .w .content .rim .nearList .boxs .nearbox .contentbox div:nth-child(3) {
+  font-size: 0.15rem;
+  color: #666;
+  line-height: 0.15rem;
+}
